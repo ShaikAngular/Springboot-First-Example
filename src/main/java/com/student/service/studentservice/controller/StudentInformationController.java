@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.student.service.studentservice.model.StudentInformation;
 import com.student.service.studentservice.services.StudentInformationService;
 
-
 @RestController
 @RequestMapping(path="/address")
 public class StudentInformationController {
