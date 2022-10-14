@@ -26,10 +26,8 @@ public class StudentInformation {
 		   
 	    // Mapping to the other table
 	    // @OneToMany(mappedBy="studentInformation", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval=true)
-//	 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval=true)
-//	    @JoinColumn(name = "rollno")
-	     @OneToMany(cascade = CascadeType.ALL)
-	     @JoinColumn(name = "rollno",nullable = false, updatable = false)
+	     @OneToMany(mappedBy="studentInformation")
+	    // @JoinColumn(name = "rollno",nullable = false, updatable = false)
 	    private List<StudentAddress> studentAddress  ;
           
 

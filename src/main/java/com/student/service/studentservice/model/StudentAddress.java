@@ -5,6 +5,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -27,11 +28,10 @@ public class StudentAddress {
 	private String country;
 	
 	// Mapping the column of this table 
-    @ManyToOne(fetch=FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
     //Adding the name
-    //@JoinColumn(name = "student_id")
-   // @JoinColumn(name = "rollno")
+    @JoinColumn(name = "rollno", nullable=false, insertable=false ,updatable=false)
     private StudentInformation studentInformation;
 
 	public int getId() {
